@@ -5,8 +5,12 @@ lapiKey = 'OU7f2jPga6Kw1P9X31OhU'
 #
 @getJSON = (url, callback) ->
   $.ajax
+    type: 'GET'
     url: url
+    dataType: 'jsonp'
     cache: false
+    crossDomain: true
+    processData: true
     success: ((data) ->
       callback(data)
     ).bind(this)
