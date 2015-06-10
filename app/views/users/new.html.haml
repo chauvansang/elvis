@@ -1,0 +1,13 @@
+.container
+  .row
+    .small-12.columns
+      %h1 Confirm your details
+      .panel
+        %h2#name
+        %p#email
+        %p#major
+      = form_for :user do |f|
+        = f.hidden_field :username
+        = f.hidden_field :full_name
+        = f.hidden_field :email
+        = f.submit 'Confirm', id: 'action-confirm', disabled: 'disabled'
