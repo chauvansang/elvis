@@ -5,25 +5,43 @@
 //
 // USEFUL UTILITIES
 //
+%no-select
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
 
-%flipX
-  +transform(scale(-1, 1))
-  filter: FlipH
-  -ms-filter: "FlipH"
-
+.login-box
+  +display-flex
+  +flex-direction(column)
 
 h1.logo
   text-transform: uppercase
+  position: relative
+  @extend %no-select
+  display: inline-block
+  color: $body-font-color
 
   &.large
-    font-size: rem-calc(100)
+    $size: 125
+    font-size: rem-calc($size)
+    word-spacing: rem-calc(.4*$size)
+    +align-self(center)
+
+    &::after
+      font-size: rem-calc(1.28*$size)
+      top: rem-calc(-.28*$size)
+      left: rem-calc($size)
 
   &::after
     content: 'L'
-    font-size: inherit
+    display: block
+    position: absolute
     font-weight: inherit
     color: $primary-color
-    @extend %flipX
+    +transform(scaleX(-1) rotate(322deg))
 
 
 // require tree

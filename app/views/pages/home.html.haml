@@ -1,6 +1,9 @@
-%h1.logo.large
-  Elvis
+.container
+  .row
+    .small-12.medium-8.medium-offset-2.large-6.large-offset-3.columns.login-box
+      %h1.logo.large
+        El is
 
-%p
-  = link_to "https://ivle.nus.edu.sg/api/login/?apikey=OU7f2jPga6Kw1P9X31OhU&url=#{new_user_url}" do
-    Login
+      %p.text-center
+        = link_to "https://ivle.nus.edu.sg/api/login/?apikey=OU7f2jPga6Kw1P9X31OhU&url=#{new_user_url}", class: 'button large radius' do
+          Login

@@ -48,7 +48,7 @@ queryTimetableUrl = (token, acadYear, semester) ->
 @queryProfile = (callback, token) ->
   getJSON(queryProfileUrl(token), callback)
 
-@queryTimetableUrl = (acadYear, semester, callback, token) ->
+@queryTimetable = (acadYear, semester, callback, token) ->
   getJSON(queryTimetableUrl(token, acadYear, semester), callback)
 
 @dataLogger = (data) ->
