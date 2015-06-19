@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use Devise for authentication
+gem 'devise'
 # Use HAML as templating engine
 gem 'haml-rails', '~> 0.9'
 # Use JsRoutes
